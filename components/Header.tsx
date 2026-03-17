@@ -26,8 +26,8 @@ export default function Header() {
             {[
               { href: "/", label: "Home" },
               { href: "/services", label: "Services" },
-              { href: "#reviews", label: "Patient Stories" },
-              { href: "#contact", label: "Contact" },
+              { href: "/#reviews", label: "Patient Stories" },
+              { href: "/#contact", label: "Contact" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -75,8 +75,8 @@ export default function Header() {
           {[
             { href: "/", label: "Home" },
             { href: "/services", label: "Services" },
-            { href: "#reviews", label: "Patient Stories" },
-            { href: "#contact", label: "Contact" },
+            { href: "/#reviews", label: "Patient Stories" },
+            { href: "/#contact", label: "Contact" },
           ].map((link) => (
             <Link
               key={link.href}

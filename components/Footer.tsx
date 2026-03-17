@@ -22,7 +22,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/services", label: "Services" },
-                { href: "#reviews", label: "Patient Stories" },
+                { href: "/#reviews", label: "Patient Stories" },
                 { href: "https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf", label: "New Patient Form", external: true },
               ].map((link) => (
                 <li key={link.href}>
