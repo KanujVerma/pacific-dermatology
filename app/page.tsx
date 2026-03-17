@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Shield, Award, Heart, Users, Phone } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
@@ -14,6 +15,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative min-h-screen bg-navy-950 flex items-center pt-20">
         {/* Subtle gradient overlay */}
+        <Image src="/images/hero-bg.jpg" alt="" fill className="object-cover opacity-20" priority />
         <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,_var(--gold-500)_0%,_transparent_60%)] opacity-5" />
         <HeroOrbs />
@@ -82,8 +84,14 @@ export default function Home() {
       {/* ── About Dr. Fung ── */}
       <section className="py-24 bg-cream-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AnimateIn direction="left">
-            <div className="max-w-4xl mx-auto text-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <AnimateIn direction="left">
+              <div className="relative h-80 md:h-[500px] overflow-hidden">
+                <Image src="/images/about-clinic.jpg" alt="Pacific Dermatology clinic" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 to-transparent" />
+              </div>
+            </AnimateIn>
+            <AnimateIn direction="right">
               <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-4 font-sans">About the Practice</p>
               <h2 className="text-4xl md:text-5xl font-serif text-navy-900 mb-8 leading-tight">
                 Dr. Hank Fung —<br />Dermatology With Depth
@@ -105,8 +113,8 @@ export default function Home() {
               >
                 Schedule a Consultation <ArrowRight size={14} />
               </a>
-            </div>
-          </AnimateIn>
+            </AnimateIn>
+          </div>
         </div>
       </section>
 
