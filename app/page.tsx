@@ -4,6 +4,7 @@ import { ArrowRight, Phone } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewCard from "@/components/ReviewCard";
 import AnimateIn from "@/components/AnimateIn";
+import ClipReveal from "@/components/ClipReveal";
 import TiltCard from "@/components/TiltCard";
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
@@ -30,35 +31,17 @@ export default function Home() {
       <section className="py-24 bg-cream-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <AnimateIn direction="left">
-              <div className="relative h-80 md:h-[500px] overflow-hidden">
-                <Image src="/images/about-clinic.jpg" alt="Pacific Dermatology clinic" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 to-transparent" />
-              </div>
-            </AnimateIn>
-            <AnimateIn direction="right">
-              <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-4 font-sans">About the Practice</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-navy-900 mb-8 leading-tight">
-                Dr. Hank Fung —<br />Dermatology With Depth
-              </h2>
-              <p className="text-navy-700 text-lg leading-relaxed mb-6">
-                For over two decades, Dr. Hank Fung has been the dermatologist Pleasanton families trust for
-                everything from annual skin cancer screenings to the latest cosmetic treatments. His
-                patient-centered approach means you're never rushed — every concern is heard, every
-                question answered.
-              </p>
-              <p className="text-navy-600 text-base leading-relaxed mb-10">
-                Pacific Dermatology offers a rare combination: the diagnostic precision of a
-                top-tier medical practice with the refined, elevated experience of a boutique clinic.
-                Because your skin deserves nothing less.
-              </p>
-              <a
-                href="tel:9254268828"
-                className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 text-sm tracking-wider uppercase border-b border-gold-400 hover:border-gold-600 pb-1 transition-all"
-              >
-                Schedule a Consultation <ArrowRight size={14} />
-              </a>
-            </AnimateIn>
+            <ClipReveal className="relative h-80 md:h-[500px] overflow-hidden">
+              <Image src="/images/about-clinic.jpg" alt="Pacific Dermatology clinic" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 to-transparent" />
+            </ClipReveal>
+            <div>
+              <AnimateIn delay={0}><p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-4 font-sans">About the Practice</p></AnimateIn>
+              <AnimateIn delay={0.1}><h2 className="text-4xl md:text-5xl font-serif text-navy-900 mb-8 leading-tight">Dr. Hank Fung —<br />Dermatology With Depth</h2></AnimateIn>
+              <AnimateIn delay={0.2}><p className="text-navy-700 text-lg leading-relaxed mb-6">For over two decades, Dr. Hank Fung has been the dermatologist Pleasanton families trust for everything from annual skin cancer screenings to the latest cosmetic treatments. His patient-centered approach means you&apos;re never rushed — every concern is heard, every question answered.</p></AnimateIn>
+              <AnimateIn delay={0.3}><p className="text-navy-600 text-base leading-relaxed mb-10">Pacific Dermatology offers a rare combination: the diagnostic precision of a top-tier medical practice with the refined, elevated experience of a boutique clinic. Because your skin deserves nothing less.</p></AnimateIn>
+              <AnimateIn delay={0.4}><a href="tel:9254268828" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 text-sm tracking-wider uppercase border-b border-gold-400 hover:border-gold-600 pb-1 transition-all">Schedule a Consultation <ArrowRight size={14} /></a></AnimateIn>
+            </div>
           </div>
         </div>
       </section>
