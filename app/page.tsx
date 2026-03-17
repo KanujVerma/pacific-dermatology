@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
-import ReviewCard from "@/components/ReviewCard";
+import ReviewCarousel from "@/components/ReviewCarousel";
 import AnimateIn from "@/components/AnimateIn";
 import ClipReveal from "@/components/ClipReveal";
 import HeroSection from "@/components/HeroSection";
@@ -60,53 +60,7 @@ export default function Home() {
         ]}
       />
 
-      {/* ── Patient Reviews ── */}
-      <section id="reviews" className="py-24 bg-cream-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-4 font-sans">Patient Stories</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-navy-900 mb-6">
-              What Our Patients Say
-            </h2>
-            <p className="text-navy-600 text-lg max-w-xl mx-auto">
-              Over 20 years of care reflected in the words of the Pleasanton families we serve.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                quote: "Dr. Fung is the best dermatologist I've ever seen. He took the time to really listen and explain my diagnosis. I finally feel like my skin is in good hands.",
-                author: "Karen C.",
-                location: "Pleasanton, CA",
-              },
-              {
-                quote: "I've been coming to Pacific Dermatology for over 10 years. The care here is truly different — attentive, thorough, and never rushed. Highly recommend to anyone in the East Bay.",
-                author: "Michael T.",
-                location: "Dublin, CA",
-              },
-              {
-                quote: "Dr. Fung caught an early-stage melanoma during my annual screening. I cannot overstate how much that visit meant to my family. Exceptional physician.",
-                author: "Linda R.",
-                location: "Pleasanton, CA",
-              },
-              {
-                quote: "The cosmetic work Dr. Fung has done is subtle and natural. I look refreshed, not done. His aesthetic sense is impeccable. This is now my go-to for everything skin.",
-                author: "Sarah M.",
-                location: "San Ramon, CA",
-              },
-            ].map((review, i) => (
-              <AnimateIn key={review.author} delay={i * 0.1}>
-                <ReviewCard
-                  quote={review.quote}
-                  author={review.author}
-                  location={review.location}
-                />
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ReviewCarousel />
 
       {/* ── New Patient CTA ── */}
       <section className="py-20 bg-navy-900">
