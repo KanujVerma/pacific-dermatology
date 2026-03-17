@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import LenisProvider from "@/components/LenisProvider";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -36,14 +37,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
         className={`${playfair.variable} ${montserrat.variable} font-sans antialiased bg-background text-foreground selection:bg-gold-500/30`}
       >
-        <Header />
-        {children}
-        <Footer />
-        <ChatWidget />
+        <LenisProvider>
+          <Header />
+          {children}
+          <Footer />
+          <ChatWidget />
+        </LenisProvider>
       </body>
     </html>
   );
