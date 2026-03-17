@@ -79,16 +79,48 @@ export default function Home() {
       {/* ── Services Teaser ── */}
       <HorizontalScroll
         medicalCards={[
-          { title: "Acne Treatment", desc: "Targeted therapies for all ages and severity levels." },
-          { title: "Skin Cancer Screening", desc: "Early detection and full-body mole evaluations." },
-          { title: "Eczema & Psoriasis", desc: "Evidence-based management for chronic conditions." },
-          { title: "Mole Removal", desc: "Safe, precise removal with pathology when indicated." },
+          {
+            title: "Acne Treatment",
+            desc: "Targeted therapies for all ages and severity levels.",
+            image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
+          },
+          {
+            title: "Skin Cancer Screening",
+            desc: "Early detection and full-body mole evaluations.",
+            image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=600&q=80",
+          },
+          {
+            title: "Eczema & Psoriasis",
+            desc: "Evidence-based management for chronic conditions.",
+            image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&q=80",
+          },
+          {
+            title: "Mole Removal",
+            desc: "Safe, precise removal with pathology when indicated.",
+            image: "https://images.unsplash.com/photo-1584467735867-4297ae2ebcee?w=600&q=80",
+          },
         ]}
         cosmeticCards={[
-          { title: "Botox & Dysport", desc: "Natural-looking wrinkle relaxation and prevention." },
-          { title: "Dermal Fillers", desc: "Restore volume and contour with precision." },
-          { title: "Laser Treatments", desc: "Resurfacing, pigmentation, and rejuvenation." },
-          { title: "Chemical Peels", desc: "Exfoliation and renewal for a luminous complexion." },
+          {
+            title: "Botox & Dysport",
+            desc: "Natural-looking wrinkle relaxation and prevention.",
+            image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
+          },
+          {
+            title: "Dermal Fillers",
+            desc: "Restore volume and contour with precision.",
+            image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
+          },
+          {
+            title: "Laser Treatments",
+            desc: "Resurfacing, pigmentation, and rejuvenation.",
+            image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&q=80",
+          },
+          {
+            title: "Chemical Peels",
+            desc: "Exfoliation and renewal for a luminous complexion.",
+            image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
+          },
         ]}
       />
 

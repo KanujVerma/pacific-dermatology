@@ -9,6 +9,7 @@ import ServiceCard from "@/components/ServiceCard";
 interface ServiceItem {
   title: string;
   desc: string;
+  image?: string;
 }
 
 interface HorizontalScrollProps {
@@ -101,7 +102,7 @@ export default function HorizontalScroll({ medicalCards, cosmeticCards }: Horizo
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <ServiceCard title={card.title} description={card.desc} />
+                      <ServiceCard title={card.title} description={card.desc} image={card.image} />
                     </motion.div>
                   ))}
                 </div>
@@ -123,7 +124,7 @@ export default function HorizontalScroll({ medicalCards, cosmeticCards }: Horizo
               <p className="text-gold-400 text-xs tracking-[0.2em] uppercase mb-4 font-sans border-b border-gold-500/20 pb-3">{label}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {cards.map((card) => (
-                  <ServiceCard key={card.title} title={card.title} description={card.desc} />
+                  <ServiceCard key={card.title} title={card.title} description={card.desc} image={card.image} />
                 ))}
               </div>
             </div>
