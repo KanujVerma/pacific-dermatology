@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -15,10 +13,7 @@ export default function ServiceCard({ title, description, href = "/services" }: 
       <h3 className="text-cream-100 font-serif text-lg mb-2 group-hover:text-gold-300 transition-colors">
         {title}
       </h3>
-      <p className="text-cream-400 text-sm leading-relaxed mb-4">{description}</p>
-      <span className="flex items-center gap-1.5 text-gold-500 text-xs tracking-wider uppercase group-hover:gap-2.5 transition-all">
-        Learn More <ArrowRight size={12} />
-      </span>
+      <p className="text-cream-400 text-sm leading-relaxed">{description}</p>
     </a>
   );
 }
