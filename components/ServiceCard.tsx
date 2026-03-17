@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -6,7 +8,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, href = "/services" }: ServiceCardProps) {
   return (
-    <a
+    <Link
       href={href}
       className="group block bg-navy-900 border border-navy-700 hover:border-gold-500/50 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-950/50"
     >
@@ -14,6 +16,6 @@ export default function ServiceCard({ title, description, href = "/services" }: 
         {title}
       </h3>
       <p className="text-cream-400 text-sm leading-relaxed">{description}</p>
-    </a>
+    </Link>
   );
 }

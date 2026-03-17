@@ -23,7 +23,7 @@ export default function Footer() {
                 { href: "/", label: "Home" },
                 { href: "/services", label: "Services" },
                 { href: "#reviews", label: "Patient Stories" },
-                { href: "https://d1wqtots2bk2xi.cloudfront.net/Pacific+Dermatology+New+Patient+Registration+Form.pdf", label: "New Patient Form", external: true },
+                { href: "https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf", label: "New Patient Form", external: true },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -73,7 +73,7 @@ export default function Footer() {
               Ready to experience concierge-level dermatology care?
             </p>
             <a
-              href="https://d1wqtots2bk2xi.cloudfront.net/Pacific+Dermatology+New+Patient+Registration+Form.pdf"
+              href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-navy-950 text-xs tracking-[0.15em] uppercase px-5 py-3 transition-all mb-3"
