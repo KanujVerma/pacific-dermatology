@@ -1,13 +1,12 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Shield, Award, Heart, Users, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewCard from "@/components/ReviewCard";
 import AnimateIn from "@/components/AnimateIn";
 import TiltCard from "@/components/TiltCard";
 import HeroSection from "@/components/HeroSection";
-import CountUp from "@/components/CountUp";
+import Marquee from "@/components/Marquee";
 
 export default function Home() {
   return (
@@ -15,26 +14,17 @@ export default function Home() {
       {/* ── Hero ── */}
       <HeroSection />
 
-      {/* ── Trust bar ── */}
-      <section className="bg-gold-500 py-5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {(
-              [
-                { icon: Award, label: <><CountUp to={20} suffix="+" /> Years of Trusted Care</> },
-                { icon: Shield, label: "Board-Certified Dermatologist" },
-                { icon: Heart, label: "Patient-Centered Environment" },
-                { icon: Users, label: "Full-Service Medical Care" },
-              ] as { icon: React.ElementType; label: React.ReactNode }[]
-            ).map(({ icon: Icon, label }, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <Icon size={18} className="text-navy-900 shrink-0" />
-                <span className="text-navy-900 text-xs font-medium tracking-wide uppercase leading-tight">{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Marquee
+        items={[
+          "20+ Years of Trusted Care",
+          "Board-Certified Dermatologist",
+          "Patient-Centered Environment",
+          "Full-Service Medical Care",
+          "Pleasanton, CA",
+          "Dr. Hank Fung",
+        ]}
+        duration={35}
+      />
 
       {/* ── About Dr. Fung ── */}
       <section className="py-24 bg-cream-100">
