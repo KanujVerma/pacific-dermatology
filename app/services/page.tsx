@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { ArrowRight, Phone } from "lucide-react";
+import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import AnimateIn from "@/components/AnimateIn";
-import TiltCard from "@/components/TiltCard";
+import SplitHeading from "@/components/SplitHeading";
+import Marquee from "@/components/Marquee";
+import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Services | Pacific Dermatology",
@@ -13,34 +15,42 @@ const medicalServices = [
   {
     title: "Acne Treatment",
     description: "Comprehensive acne care for teens and adults — from topical regimens to prescription medications and procedural treatments like extractions and chemical peels.",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
   },
   {
     title: "Skin Cancer Screening",
     description: "Thorough full-body skin checks with dermoscopy for early detection of melanoma, basal cell, and squamous cell carcinomas. Early detection saves lives.",
+    image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=600&q=80",
   },
   {
     title: "Mole Evaluation & Removal",
     description: "Expert evaluation of suspicious or cosmetically unwanted moles with surgical excision and pathology review when indicated.",
+    image: "https://images.unsplash.com/photo-1584467735867-4297ae2ebcee?w=600&q=80",
   },
   {
     title: "Eczema (Atopic Dermatitis)",
     description: "Evidence-based management plans tailored to your triggers — including topical treatments, biologics, and lifestyle guidance to reduce flares.",
+    image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&q=80",
   },
   {
     title: "Psoriasis",
     description: "Medical-grade psoriasis treatment ranging from topical corticosteroids and phototherapy to advanced biologic therapies for moderate-to-severe cases.",
+    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80",
   },
   {
     title: "Rosacea",
     description: "Customized rosacea management including topical therapies, oral antibiotics, laser treatments, and trigger identification to reduce visible redness.",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
   },
   {
     title: "Wart & Molluscum Removal",
     description: "Safe, effective removal of common, plantar, and genital warts as well as molluscum contagiosum using cryotherapy and other proven techniques.",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
   },
   {
     title: "Nail & Hair Disorders",
     description: "Diagnosis and treatment of nail fungus, alopecia, and other scalp and hair conditions — including referral pathways when systemic workup is needed.",
+    image: "https://images.unsplash.com/photo-1522337913770-5c60c20c54a0?w=600&q=80",
   },
 ];
 
@@ -48,34 +58,42 @@ const cosmeticServices = [
   {
     title: "Botox & Dysport",
     description: "Precise neuromodulator injections to soften forehead lines, crow's feet, and frown lines. Dr. Fung's approach emphasizes natural-looking results — refreshed, never frozen.",
+    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
   },
   {
     title: "Dermal Fillers",
     description: "Hyaluronic acid fillers (Juvederm, Restylane) to restore cheek volume, soften nasolabial folds, and define lip contours with artful, balanced results.",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
   },
   {
     title: "Laser Skin Resurfacing",
     description: "Fractional laser treatments to improve texture, reduce fine lines, minimize pores, and address sun damage — with minimal downtime.",
+    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&q=80",
   },
   {
     title: "IPL / Photofacial",
     description: "Intense pulsed light therapy to target brown spots, broken capillaries, and uneven skin tone for a clearer, more luminous complexion.",
+    image: "https://images.unsplash.com/photo-1526835862850-97bb8c8c9f2e?w=600&q=80",
   },
   {
     title: "Chemical Peels",
     description: "Medical-grade glycolic, salicylic, and TCA peels to exfoliate and renew the skin — addressing acne scars, hyperpigmentation, and dullness.",
+    image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
   },
   {
     title: "Microneedling",
     description: "Collagen induction therapy to improve skin texture, minimize pores, and reduce the appearance of acne scarring and fine lines.",
+    image: "https://images.unsplash.com/photo-1556227834-09f1de7a7d14?w=600&q=80",
   },
   {
     title: "Sclerotherapy",
     description: "Minimally invasive treatment for spider veins and small varicose veins, using precise injections to fade unwanted visible vessels.",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
   },
   {
     title: "Kybella",
     description: "FDA-approved deoxycholic acid injections to permanently destroy fat cells under the chin — eliminating submental fullness without surgery.",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
   },
 ];
 
@@ -83,35 +101,62 @@ export default function ServicesPage() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="bg-navy-950 py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AnimateIn delay={0.1}>
-            <div className="max-w-3xl">
-              <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4 font-sans">
+      <section className="relative min-h-[60vh] bg-navy-950 flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=80"
+            alt=""
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/90 to-navy-950" />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24">
+          <div className="max-w-3xl">
+            <AnimateIn>
+              <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-6 font-sans">
                 Our Services
               </p>
-              <h1 className="text-5xl md:text-6xl font-serif text-cream-50 mb-6 leading-tight">
-                Comprehensive Care<br />
-                <span className="text-gold-400">For Your Skin</span>
-              </h1>
-              <p className="text-cream-300 text-lg leading-relaxed">
+            </AnimateIn>
+            <SplitHeading
+              className="text-5xl md:text-6xl font-serif text-cream-50 leading-tight mb-6"
+              delay={0.1}
+            >
+              Comprehensive Care For Your Skin
+            </SplitHeading>
+            <AnimateIn delay={0.5}>
+              <p className="text-cream-300 text-lg leading-relaxed max-w-2xl">
                 Dr. Hank Fung offers the full spectrum of medical and cosmetic dermatology —
                 bringing over 20 years of clinical depth to every treatment, from skin cancer
                 screenings to the latest aesthetic procedures.
               </p>
-            </div>
-          </AnimateIn>
+            </AnimateIn>
+          </div>
         </div>
       </section>
 
+      <Marquee
+        items={[
+          "Medical Dermatology",
+          "Cosmetic Treatments",
+          "Board-Certified Dermatologist",
+          "20+ Years of Care",
+          "Pleasanton, CA",
+          "Dr. Hank Fung",
+        ]}
+        duration={35}
+      />
+
       {/* Medical Services */}
-      <section className="py-24 bg-cream-100">
+      <section className="py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <AnimateIn>
             <div className="mb-12">
-              <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Clinical Excellence</p>
-              <h2 className="text-4xl font-serif text-navy-900 mb-4">Medical Dermatology</h2>
-              <p className="text-navy-600 text-base max-w-2xl">
+              <p className="text-gold-400 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Clinical Excellence</p>
+              <h2 className="text-4xl font-serif text-cream-50 mb-4">Medical Dermatology</h2>
+              <p className="text-cream-400 text-base max-w-2xl">
                 Evidence-based care for the full range of skin conditions — delivered with the
                 precision and attentiveness that have made Dr. Fung the trusted choice in Pleasanton for decades.
               </p>
@@ -119,26 +164,23 @@ export default function ServicesPage() {
           </AnimateIn>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {medicalServices.map((s) => (
-              <TiltCard key={s.title}>
-                <div className="bg-white border border-cream-300 hover:border-gold-400/50 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
-                  <h3 className="text-navy-900 font-serif text-lg mb-2">{s.title}</h3>
-                  <p className="text-navy-600 text-sm leading-relaxed">{s.description}</p>
-                </div>
-              </TiltCard>
+            {medicalServices.map((s, i) => (
+              <AnimateIn key={s.title} delay={i * 0.05}>
+                <ServiceCard title={s.title} description={s.description} image={s.image} />
+              </AnimateIn>
             ))}
           </div>
         </div>
       </section>
 
       {/* Cosmetic Services */}
-      <section className="py-24 bg-navy-950">
+      <section className="py-24 bg-cream-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <AnimateIn>
             <div className="mb-12">
-              <p className="text-gold-400 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Aesthetic Medicine</p>
-              <h2 className="text-4xl font-serif text-cream-50 mb-4">Cosmetic Dermatology</h2>
-              <p className="text-cream-400 text-base max-w-2xl">
+              <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Aesthetic Medicine</p>
+              <h2 className="text-4xl font-serif text-navy-900 mb-4">Cosmetic Dermatology</h2>
+              <p className="text-navy-600 text-base max-w-2xl">
                 Advanced aesthetic treatments performed with surgical precision and an artist&apos;s
                 eye. Our philosophy: enhancement that looks entirely natural.
               </p>
@@ -146,46 +188,16 @@ export default function ServicesPage() {
           </AnimateIn>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {cosmeticServices.map((s) => (
-              <TiltCard key={s.title}>
-                <ServiceCard title={s.title} description={s.description} />
-              </TiltCard>
+            {cosmeticServices.map((s, i) => (
+              <AnimateIn key={s.title} delay={i * 0.05}>
+                <ServiceCard title={s.title} description={s.description} image={s.image} />
+              </AnimateIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-gold-500">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <AnimateIn>
-            <h2 className="text-3xl md:text-4xl font-serif text-navy-950 mb-4">
-              Ready to Schedule Your Visit?
-            </h2>
-            <p className="text-navy-800 text-base mb-8 max-w-xl mx-auto">
-              Call Pacific Dermatology today to book with Dr. Hank Fung.
-              New patients are always welcome.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:9254268828"
-                className="inline-flex items-center justify-center gap-2 bg-navy-950 hover:bg-navy-900 text-cream-50 font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all"
-              >
-                <Phone size={15} />
-                (925) 426-8828
-              </a>
-              <a
-                href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-navy-950 text-navy-950 hover:bg-navy-950 hover:text-gold-400 font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all"
-              >
-                New Patient Form <ArrowRight size={14} />
-              </a>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
+      <CTASection />
     </main>
   );
 }
