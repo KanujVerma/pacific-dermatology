@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
 import HorizontalScroll from "@/components/HorizontalScroll";
 import CTASection from "@/components/CTASection";
+import StatsSection from "@/components/StatsSection";
 
 export default function Home() {
   return (
@@ -124,13 +125,22 @@ export default function Home() {
         ]}
       />
 
+      <StatsSection />
+
       <ReviewCarousel />
 
       <CTASection />
 
       {/* ── Contact ── */}
-      <section id="contact" className="py-24 bg-cream-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section id="contact" className="py-24 relative overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1600&q=80"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-cream-100/90" />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-4 font-sans">Get In Touch</p>
             <h2 className="text-4xl font-serif text-navy-900 mb-6">We&apos;re Here for You</h2>
