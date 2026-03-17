@@ -31,7 +31,7 @@ export default function HeroSection() {
           src="/images/hero-bg.jpg"
           alt=""
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-40"
           priority
         />
       </motion.div>
