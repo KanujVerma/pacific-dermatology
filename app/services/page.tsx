@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowRight, Phone } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
+import AnimateIn from "@/components/AnimateIn";
+import TiltCard from "@/components/TiltCard";
 
 export const metadata: Metadata = {
   title: "Services | Pacific Dermatology",
@@ -83,44 +85,47 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="bg-navy-950 py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4 font-sans">
-              Our Services
-            </p>
-            <h1 className="text-5xl md:text-6xl font-serif text-cream-50 mb-6 leading-tight">
-              Comprehensive Care<br />
-              <span className="text-gold-400">For Your Skin</span>
-            </h1>
-            <p className="text-cream-300 text-lg leading-relaxed">
-              Dr. Hank Fung offers the full spectrum of medical and cosmetic dermatology —
-              bringing over 20 years of clinical depth to every treatment, from skin cancer
-              screenings to the latest aesthetic procedures.
-            </p>
-          </div>
+          <AnimateIn delay={0.1}>
+            <div className="max-w-3xl">
+              <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4 font-sans">
+                Our Services
+              </p>
+              <h1 className="text-5xl md:text-6xl font-serif text-cream-50 mb-6 leading-tight">
+                Comprehensive Care<br />
+                <span className="text-gold-400">For Your Skin</span>
+              </h1>
+              <p className="text-cream-300 text-lg leading-relaxed">
+                Dr. Hank Fung offers the full spectrum of medical and cosmetic dermatology —
+                bringing over 20 years of clinical depth to every treatment, from skin cancer
+                screenings to the latest aesthetic procedures.
+              </p>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 
       {/* Medical Services */}
       <section className="py-24 bg-cream-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-12">
-            <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Clinical Excellence</p>
-            <h2 className="text-4xl font-serif text-navy-900 mb-4">Medical Dermatology</h2>
-            <p className="text-navy-600 text-base max-w-2xl">
-              Evidence-based care for the full range of skin conditions — delivered with the
-              precision and attentiveness that have made Dr. Fung the trusted choice in Pleasanton for decades.
-            </p>
-          </div>
+          <AnimateIn>
+            <div className="mb-12">
+              <p className="text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Clinical Excellence</p>
+              <h2 className="text-4xl font-serif text-navy-900 mb-4">Medical Dermatology</h2>
+              <p className="text-navy-600 text-base max-w-2xl">
+                Evidence-based care for the full range of skin conditions — delivered with the
+                precision and attentiveness that have made Dr. Fung the trusted choice in Pleasanton for decades.
+              </p>
+            </div>
+          </AnimateIn>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {medicalServices.map((s) => (
-              <div
-                key={s.title}
-                className="bg-white border border-cream-300 hover:border-gold-400/50 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <h3 className="text-navy-900 font-serif text-lg mb-2">{s.title}</h3>
-                <p className="text-navy-600 text-sm leading-relaxed">{s.description}</p>
-              </div>
+              <TiltCard key={s.title}>
+                <div className="bg-white border border-cream-300 hover:border-gold-400/50 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+                  <h3 className="text-navy-900 font-serif text-lg mb-2">{s.title}</h3>
+                  <p className="text-navy-600 text-sm leading-relaxed">{s.description}</p>
+                </div>
+              </TiltCard>
             ))}
           </div>
         </div>
@@ -129,18 +134,22 @@ export default function ServicesPage() {
       {/* Cosmetic Services */}
       <section className="py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-12">
-            <p className="text-gold-400 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Aesthetic Medicine</p>
-            <h2 className="text-4xl font-serif text-cream-50 mb-4">Cosmetic Dermatology</h2>
-            <p className="text-cream-400 text-base max-w-2xl">
-              Advanced aesthetic treatments performed with surgical precision and an artist&apos;s
-              eye. Our philosophy: enhancement that looks entirely natural.
-            </p>
-          </div>
+          <AnimateIn>
+            <div className="mb-12">
+              <p className="text-gold-400 text-xs tracking-[0.25em] uppercase mb-3 font-sans">Aesthetic Medicine</p>
+              <h2 className="text-4xl font-serif text-cream-50 mb-4">Cosmetic Dermatology</h2>
+              <p className="text-cream-400 text-base max-w-2xl">
+                Advanced aesthetic treatments performed with surgical precision and an artist&apos;s
+                eye. Our philosophy: enhancement that looks entirely natural.
+              </p>
+            </div>
+          </AnimateIn>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {cosmeticServices.map((s) => (
-              <ServiceCard key={s.title} title={s.title} description={s.description} />
+              <TiltCard key={s.title}>
+                <ServiceCard title={s.title} description={s.description} />
+              </TiltCard>
             ))}
           </div>
         </div>
@@ -149,30 +158,32 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-20 bg-gold-500">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif text-navy-950 mb-4">
-            Ready to Schedule Your Visit?
-          </h2>
-          <p className="text-navy-800 text-base mb-8 max-w-xl mx-auto">
-            Call Pacific Dermatology today to book with Dr. Hank Fung.
-            New patients are always welcome.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:9254268828"
-              className="inline-flex items-center justify-center gap-2 bg-navy-950 hover:bg-navy-900 text-cream-50 font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all"
-            >
-              <Phone size={15} />
-              (925) 426-8828
-            </a>
-            <a
-              href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border-2 border-navy-950 text-navy-950 hover:bg-navy-950 hover:text-gold-400 font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all"
-            >
-              New Patient Form <ArrowRight size={14} />
-            </a>
-          </div>
+          <AnimateIn>
+            <h2 className="text-3xl md:text-4xl font-serif text-navy-950 mb-4">
+              Ready to Schedule Your Visit?
+            </h2>
+            <p className="text-navy-800 text-base mb-8 max-w-xl mx-auto">
+              Call Pacific Dermatology today to book with Dr. Hank Fung.
+              New patients are always welcome.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:9254268828"
+                className="inline-flex items-center justify-center gap-2 bg-navy-950 hover:bg-navy-900 text-cream-50 font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all"
+              >
+                <Phone size={15} />
+                (925) 426-8828
+              </a>
+              <a
+                href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-navy-950 text-navy-950 hover:bg-navy-950 hover:text-gold-400 font-medium px-8 py-4 text-sm tracking-wide uppercase transition-all"
+              >
+                New Patient Form <ArrowRight size={14} />
+              </a>
+            </div>
+          </AnimateIn>
         </div>
       </section>
     </main>
