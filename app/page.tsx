@@ -1,13 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
-import ServiceCard from "@/components/ServiceCard";
 import ReviewCard from "@/components/ReviewCard";
 import AnimateIn from "@/components/AnimateIn";
 import ClipReveal from "@/components/ClipReveal";
-import TiltCard from "@/components/TiltCard";
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
+import HorizontalScroll from "@/components/HorizontalScroll";
 
 export default function Home() {
   return (
@@ -47,64 +45,20 @@ export default function Home() {
       </section>
 
       {/* ── Services Teaser ── */}
-      <section className="py-24 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AnimateIn>
-            <div className="text-center mb-16">
-              <p className="text-gold-400 text-xs tracking-[0.25em] uppercase mb-4 font-sans">Our Expertise</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-cream-50 mb-6">Medical &amp; Cosmetic Dermatology</h2>
-              <p className="text-cream-400 text-lg max-w-2xl mx-auto">
-                Comprehensive care for your skin health — from clinical diagnosis to aesthetic refinement.
-              </p>
-            </div>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Medical */}
-            <div>
-              <p className="text-gold-400 text-xs tracking-[0.2em] uppercase mb-5 font-sans border-b border-gold-500/20 pb-3">Medical Dermatology</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  { title: "Acne Treatment", desc: "Targeted therapies for all ages and severity levels." },
-                  { title: "Skin Cancer Screening", desc: "Early detection and full-body mole evaluations." },
-                  { title: "Eczema & Psoriasis", desc: "Evidence-based management for chronic conditions." },
-                  { title: "Mole Removal", desc: "Safe, precise removal with pathology when indicated." },
-                ].map((s) => (
-                  <TiltCard key={s.title}>
-                    <ServiceCard title={s.title} description={s.desc} />
-                  </TiltCard>
-                ))}
-              </div>
-            </div>
-
-            {/* Cosmetic */}
-            <div>
-              <p className="text-gold-400 text-xs tracking-[0.2em] uppercase mb-5 font-sans border-b border-gold-500/20 pb-3">Cosmetic Dermatology</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  { title: "Botox & Dysport", desc: "Natural-looking wrinkle relaxation and prevention." },
-                  { title: "Dermal Fillers", desc: "Restore volume and contour with precision." },
-                  { title: "Laser Treatments", desc: "Resurfacing, pigmentation, and rejuvenation." },
-                  { title: "Chemical Peels", desc: "Exfoliation and renewal for a luminous complexion." },
-                ].map((s) => (
-                  <TiltCard key={s.title}>
-                    <ServiceCard title={s.title} description={s.desc} />
-                  </TiltCard>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 border border-gold-500/50 hover:border-gold-400 hover:bg-gold-500/5 text-gold-400 hover:text-gold-300 px-8 py-4 text-sm tracking-wider uppercase transition-all"
-            >
-              View All Services <ArrowRight size={14} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HorizontalScroll
+        medicalCards={[
+          { title: "Acne Treatment", desc: "Targeted therapies for all ages and severity levels." },
+          { title: "Skin Cancer Screening", desc: "Early detection and full-body mole evaluations." },
+          { title: "Eczema & Psoriasis", desc: "Evidence-based management for chronic conditions." },
+          { title: "Mole Removal", desc: "Safe, precise removal with pathology when indicated." },
+        ]}
+        cosmeticCards={[
+          { title: "Botox & Dysport", desc: "Natural-looking wrinkle relaxation and prevention." },
+          { title: "Dermal Fillers", desc: "Restore volume and contour with precision." },
+          { title: "Laser Treatments", desc: "Resurfacing, pigmentation, and rejuvenation." },
+          { title: "Chemical Peels", desc: "Exfoliation and renewal for a luminous complexion." },
+        ]}
+      />
 
       {/* ── Patient Reviews ── */}
       <section id="reviews" className="py-24 bg-cream-200">
