@@ -6,6 +6,7 @@ import ClipReveal from "@/components/ClipReveal";
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
 import HorizontalScroll from "@/components/HorizontalScroll";
+import CTASection from "@/components/CTASection";
 
 export default function Home() {
   return (
@@ -62,40 +63,7 @@ export default function Home() {
 
       <ReviewCarousel />
 
-      {/* ── New Patient CTA ── */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AnimateIn>
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div>
-                <p className="text-gold-400 text-xs tracking-[0.25em] uppercase mb-3 font-sans">New Patients Welcome</p>
-                <h2 className="text-3xl md:text-4xl font-serif text-cream-50 mb-2">Ready to Get Started?</h2>
-                <p className="text-cream-400 text-base max-w-xl">
-                  Download the new patient registration form and have it ready before your first visit.
-                  Then call us to schedule — we'll take care of the rest.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-                <a
-                  href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-gold-400/50 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-7 py-4 text-sm tracking-wide uppercase transition-all"
-                >
-                  Download Patient Form
-                </a>
-                <a
-                  href="tel:9254268828"
-                  className="inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-950 font-medium px-7 py-4 text-sm tracking-wide uppercase transition-all"
-                >
-                  <Phone size={15} />
-                  Call to Schedule
-                </a>
-              </div>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
+      <CTASection />
 
       {/* ── Contact ── */}
       <section id="contact" className="py-24 bg-cream-100">
