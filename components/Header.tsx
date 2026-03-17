@@ -49,7 +49,7 @@ export default function Header() {
               (925) 426-8828
             </a>
             <a
-              href="https://www.zocdoc.com"
+              href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gold-500 hover:bg-gold-400 text-navy-950 text-sm font-medium px-5 py-2.5 tracking-wide uppercase transition-colors"

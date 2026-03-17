@@ -204,7 +204,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
               <a
-                href="https://d1wqtots2bk2xi.cloudfront.net/Pacific+Dermatology+New+Patient+Registration+Form.pdf"
+                href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border border-gold-400/50 hover:border-gold-400 text-gold-400 hover:text-gold-300 px-7 py-4 text-sm tracking-wide uppercase transition-all"
