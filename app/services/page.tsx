@@ -118,7 +118,7 @@ const cosmeticServices = [
   {
     title: "Kybella",
     description: "FDA-approved deoxycholic acid injections to permanently destroy fat cells under the chin — eliminating submental fullness without surgery.",
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80",
   },
   {
     title: "Daxxify",
