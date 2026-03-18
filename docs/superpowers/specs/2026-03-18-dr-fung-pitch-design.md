@@ -26,7 +26,7 @@ A luxury redesign of Dr. Fung's site is live at `https://pacific-dermatology-g5j
 **Script (word for word):**
 > "Hey Dr. Fung, thanks for making time. I'll keep this to 20 minutes. I was actually a patient of yours a few years back — [brief personal detail]. I'm now doing web development, and I built something for your practice as a project. I'd love to just show it to you and get your honest reaction."
 
-**Note:** Don't explain what you built yet. Just show.
+**Note:** Don't explain what you built yet. Just show. Fill in the personal detail before the call — a specific memory ("came in for a mole check," "you treated my eczema") lands far better than a vague mention.
 
 ---
 
@@ -43,7 +43,7 @@ A luxury redesign of Dr. Fung's site is live at `https://pacific-dermatology-g5j
 ---
 
 ### Slide 3 — The New Site (Live Screen Share)
-**Content:** Instruction slide: "Switch to browser." Cue to switch tabs to the live Vercel URL.
+**Content:** Near-blank slide — just the URL in small text at the bottom as a reference. The audience sees almost nothing; this is a transition cue for the presenter. Switch tabs immediately. No bullet points, no heading.
 **Purpose:** The visual reveal. Highest-impact moment of the pitch.
 
 **Script (word for word):**
@@ -105,6 +105,7 @@ A luxury redesign of Dr. Fung's site is live at `https://pacific-dermatology-g5j
 - Google Business Profile updates
 - Before/after gallery, online booking (when ready)
 - Month-to-month, no lock-in
+- Soft monthly range if he asks: **$150–$250/month** depending on scope
 
 **Purpose:** Plant the seed for ongoing work. Only show if he's visibly engaged — skip or skim if energy is neutral.
 
@@ -123,7 +124,7 @@ A luxury redesign of Dr. Fung's site is live at `https://pacific-dermatology-g5j
 >
 > Either way, I appreciate you taking the time. Genuinely."
 
-**Note:** Do NOT ask "so what do you think?" Give a concrete next step (DNS) or a graceful out (share link with staff). Both lead somewhere.
+**Note:** Do NOT ask "so what do you think?" Give a concrete next step (DNS) or a graceful out (share link with staff). Both lead somewhere. If he asks about hosting costs: Vercel's free Hobby plan covers this site's traffic — no ongoing cost to pass on.
 
 ---
 
