@@ -39,10 +39,10 @@ export default function Home() {
                 {/* Large image — spans both rows */}
                 <div className="relative overflow-hidden" style={{ gridRow: "1 / 3" }}>
                   <Image
-                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80"
-                    alt="Pacific Dermatology clinic interior"
+                    src="/dr-fung.png"
+                    alt="Dr. Hank Fung, Pacific Dermatology"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/20 to-transparent" />
                 </div>
