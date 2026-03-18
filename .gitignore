@@ -24,6 +24,15 @@
 .DS_Store
 *.pem
 
+# python
+.venv/
+
+# office temp files
+~$*
+
+# claude code
+.claude/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
