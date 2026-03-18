@@ -32,38 +32,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ClipReveal className="h-80 md:h-[500px]">
-              <div
-                className="grid h-full gap-2"
-                style={{ gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr" }}
-              >
-                {/* Large image — spans both rows */}
-                <div className="relative overflow-hidden" style={{ gridRow: "1 / 3" }}>
-                  <Image
-                    src="/dr-fung.png"
-                    alt="Dr. Hank Fung, Pacific Dermatology"
-                    fill
-                    className="object-cover object-top"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/20 to-transparent" />
-                </div>
-                {/* Small top */}
-                <div className="relative overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&q=80"
-                    alt="Skincare treatment"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                {/* Small bottom */}
-                <div className="relative overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80"
-                    alt="Dermatologist at work"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              <div className="relative h-full overflow-hidden">
+                <Image
+                  src="/dr-fung.png"
+                  alt="Dr. Hank Fung, Pacific Dermatology"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
             </ClipReveal>
             <div>
