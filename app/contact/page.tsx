@@ -4,6 +4,8 @@ import AnimateIn from "@/components/AnimateIn";
 import SplitHeading from "@/components/SplitHeading";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
+import ParallaxHero from "@/components/ParallaxHero";
+import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
   title: "Contact | Pacific Dermatology",
@@ -42,8 +44,11 @@ export default function ContactPage() {
   return (
     <main className="pt-20">
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-navy-950 py-24 border-b border-gold-500/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <ParallaxHero
+        src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1600&q=80"
+        className="relative min-h-[60vh] bg-navy-950 flex items-center overflow-hidden border-b border-gold-500/10"
+      >
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24">
           <AnimateIn>
             <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-6 font-sans">
               Contact
@@ -64,7 +69,19 @@ export default function ContactPage() {
             </p>
           </AnimateIn>
         </div>
-      </section>
+      </ParallaxHero>
+
+      <Marquee
+        items={[
+          "Pleasanton, CA",
+          "5924 Stoneridge Dr STE 101",
+          "(925) 426-8828",
+          "pacificdermatology@yahoo.com",
+          "Most Insurance Accepted",
+          "Dr. Hank Fung",
+        ]}
+        duration={40}
+      />
 
       {/* ── Two-column: Info + Form ───────────────────────────────────────── */}
       <section className="py-24 bg-navy-950">

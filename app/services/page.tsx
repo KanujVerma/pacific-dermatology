@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import AnimateIn from "@/components/AnimateIn";
 import SplitHeading from "@/components/SplitHeading";
 import Marquee from "@/components/Marquee";
 import CTASection from "@/components/CTASection";
+import ParallaxHero from "@/components/ParallaxHero";
 
 export const metadata: Metadata = {
   title: "Services | Pacific Dermatology",
@@ -156,18 +156,10 @@ export default function ServicesPage() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="relative min-h-[60vh] bg-navy-950 flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=80"
-            alt=""
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/90 to-navy-950" />
-
+      <ParallaxHero
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=80"
+        className="relative min-h-[60vh] bg-navy-950 flex items-center overflow-hidden"
+      >
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
             <AnimateIn>
@@ -190,7 +182,7 @@ export default function ServicesPage() {
             </AnimateIn>
           </div>
         </div>
-      </section>
+      </ParallaxHero>
 
       <Marquee
         items={[
