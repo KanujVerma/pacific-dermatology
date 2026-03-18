@@ -3,6 +3,7 @@
 import { useCallback } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
+import HeroOrbs from "@/components/HeroOrbs";
 
 interface ParallaxHeroProps {
   src: string;
@@ -70,6 +71,9 @@ export default function ParallaxHero({ src, className, children }: ParallaxHeroP
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/90 to-navy-950" />
+
+      {/* Orbs + particles */}
+      <HeroOrbs />
 
       {/* Content */}
       {children}
