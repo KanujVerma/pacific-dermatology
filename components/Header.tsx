@@ -27,7 +27,7 @@ export default function Header() {
               { href: "/", label: "Home" },
               { href: "/services", label: "Services" },
               { href: "/#reviews", label: "Patient Stories" },
-              { href: "/#contact", label: "Contact" },
+              { href: "/contact", label: "Contact" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -76,7 +76,7 @@ export default function Header() {
             { href: "/", label: "Home" },
             { href: "/services", label: "Services" },
             { href: "/#reviews", label: "Patient Stories" },
-            { href: "/#contact", label: "Contact" },
+            { href: "/contact", label: "Contact" },
           ].map((link) => (
             <Link
               key={link.href}
@@ -87,6 +87,15 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://cloud-1de12d.becdn.net/customfile/2964d845db7b1468ce2e15a75719319187a8caef175da6f482760209006fadc3/pacderm---NEW-PT-INFO-combined.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block text-gold-400 hover:text-gold-300 text-sm tracking-wider uppercase py-2 border-b border-navy-800 transition-colors"
+          >
+            New Patient Form
+          </a>
           <a
             href="tel:9254268828"
             className="flex items-center gap-2 text-gold-400 text-sm pt-2"
