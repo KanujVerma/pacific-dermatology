@@ -52,6 +52,31 @@ const medicalServices = [
     description: "Diagnosis and treatment of nail fungus, alopecia, and other scalp and hair conditions — including referral pathways when systemic workup is needed.",
     image: "https://images.unsplash.com/photo-1522337913770-5c60c20c54a0?w=600&q=80",
   },
+  {
+    title: "Atypical Nevi",
+    description: "Expert monitoring and evaluation of unusual or dysplastic moles with dermoscopy, with surgical excision when biopsy is indicated.",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
+  },
+  {
+    title: "Seborrheic Dermatitis",
+    description: "Targeted treatment for persistent dandruff, scalp flaking, and facial seborrheic dermatitis — including medicated shampoos and topical antifungals.",
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80",
+  },
+  {
+    title: "Cysts",
+    description: "Diagnosis and removal of epidermal inclusion cysts, pilar cysts, and other benign subcutaneous lesions with minimal scarring technique.",
+    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80",
+  },
+  {
+    title: "Skin Infections",
+    description: "Diagnosis and treatment of bacterial (impetigo, cellulitis), fungal (tinea, candida), and viral (herpes, molluscum) skin infections.",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80",
+  },
+  {
+    title: "Skin Growths",
+    description: "Safe removal of benign skin growths including skin tags, seborrheic keratoses, dermatofibromas, and lipomas for comfort and clarity.",
+    image: "https://images.unsplash.com/photo-1536064479547-7ee40b74b807?w=600&q=80",
+  },
 ];
 
 const cosmeticServices = [
@@ -94,6 +119,36 @@ const cosmeticServices = [
     title: "Kybella",
     description: "FDA-approved deoxycholic acid injections to permanently destroy fat cells under the chin — eliminating submental fullness without surgery.",
     image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
+  },
+  {
+    title: "Daxxify",
+    description: "Next-generation neuromodulator offering longer-lasting wrinkle relaxation than traditional Botox — fewer appointments, same natural results.",
+    image: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?w=600&q=80",
+  },
+  {
+    title: "Sculptra",
+    description: "Poly-L-lactic acid filler that gradually rebuilds collagen over months — delivering natural volume restoration that improves over time.",
+    image: "https://images.unsplash.com/photo-1598300188480-626f2f79ab8d?w=600&q=80",
+  },
+  {
+    title: "Radiesse",
+    description: "Calcium hydroxylapatite filler for immediate volume and long-term collagen stimulation — ideal for deep facial folds and hand rejuvenation.",
+    image: "https://images.unsplash.com/photo-1552862750-746b8f6f7f25?w=600&q=80",
+  },
+  {
+    title: "PDO Thread Lift",
+    description: "Non-surgical facial contouring using dissolvable PDO threads to lift and tighten sagging skin with minimal downtime.",
+    image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
+  },
+  {
+    title: "Laser Hair Removal",
+    description: "Permanent hair reduction across all skin types using advanced laser modalities — face, body, and sensitive areas treated with precision.",
+    image: "https://images.unsplash.com/photo-1583795128727-6ec3642408f8?w=600&q=80",
+  },
+  {
+    title: "Smoothbeam Laser",
+    description: "1450nm diode laser targeting the sebaceous gland to reduce active acne and improve post-acne scarring with minimal side effects.",
+    image: "https://images.unsplash.com/photo-1546015720-b8b30df5aa27?w=600&q=80",
   },
 ];
 
