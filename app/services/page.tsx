@@ -20,47 +20,47 @@ const medicalServices = [
   {
     title: "Skin Cancer Screening",
     description: "Thorough full-body skin checks with dermoscopy for early detection of melanoma, basal cell, and squamous cell carcinomas. Early detection saves lives.",
-    image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=600&q=80",
+    image: "/ai-images/services/skin%20cancer%20screening.png",
   },
   {
     title: "Mole Evaluation & Removal",
     description: "Expert evaluation of suspicious or cosmetically unwanted moles with surgical excision and pathology review when indicated.",
-    image: "https://images.unsplash.com/photo-1584467735867-4297ae2ebcee?w=600&q=80",
+    image: "/ai-images/services/mole%20evaluation.png",
   },
   {
     title: "Eczema (Atopic Dermatitis)",
     description: "Evidence-based management plans tailored to your triggers — including topical treatments, biologics, and lifestyle guidance to reduce flares.",
-    image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&q=80",
+    image: "/ai-images/services/eczema.png",
   },
   {
     title: "Psoriasis",
     description: "Medical-grade psoriasis treatment ranging from topical corticosteroids and phototherapy to advanced biologic therapies for moderate-to-severe cases.",
-    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80",
+    image: "/ai-images/services/Psoriasis.png",
   },
   {
     title: "Rosacea",
     description: "Customized rosacea management including topical therapies, oral antibiotics, laser treatments, and trigger identification to reduce visible redness.",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+    image: "/ai-images/services/Rosacea.png",
   },
   {
     title: "Wart & Molluscum Removal",
     description: "Safe, effective removal of common, plantar, and genital warts as well as molluscum contagiosum using cryotherapy and other proven techniques.",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
+    image: "/ai-images/services/Wart%20%2B%20Molluscum%20Removal.png",
   },
   {
     title: "Nail & Hair Disorders",
     description: "Diagnosis and treatment of nail fungus, alopecia, and other scalp and hair conditions — including referral pathways when systemic workup is needed.",
-    image: "https://images.unsplash.com/photo-1522337913770-5c60c20c54a0?w=600&q=80",
+    image: "/ai-images/services/Nail%20%2B%20Hair%20Disorders.png",
   },
   {
     title: "Atypical Nevi",
     description: "Expert monitoring and evaluation of unusual or dysplastic moles with dermoscopy, with surgical excision when biopsy is indicated.",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
+    image: "/ai-images/services/Atypical%20Nevi.png",
   },
   {
     title: "Seborrheic Dermatitis",
     description: "Targeted treatment for persistent dandruff, scalp flaking, and facial seborrheic dermatitis — including medicated shampoos and topical antifungals.",
-    image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80",
+    image: "/ai-images/services/Seborrheic%20Dermatitis.png",
   },
   {
     title: "Cysts",
@@ -70,7 +70,7 @@ const medicalServices = [
   {
     title: "Skin Infections",
     description: "Diagnosis and treatment of bacterial (impetigo, cellulitis), fungal (tinea, candida), and viral (herpes, molluscum) skin infections.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80",
+    image: "/ai-images/services/Skin%20Infections.png",
   },
   {
     title: "Skin Growths",
@@ -93,37 +93,37 @@ const cosmeticServices = [
   {
     title: "Laser Skin Resurfacing",
     description: "Fractional laser treatments to improve texture, reduce fine lines, minimize pores, and address sun damage — with minimal downtime.",
-    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&q=80",
+    image: "/ai-images/services/laser%20skin%20resurfacing.png",
   },
   {
     title: "IPL / Photofacial",
     description: "Intense pulsed light therapy to target brown spots, broken capillaries, and uneven skin tone for a clearer, more luminous complexion.",
-    image: "https://images.unsplash.com/photo-1526835862850-97bb8c8c9f2e?w=600&q=80",
+    image: "/ai-images/services/IPL%20%3A%20Photofacial.png",
   },
   {
     title: "Chemical Peels",
     description: "Medical-grade glycolic, salicylic, and TCA peels to exfoliate and renew the skin — addressing acne scars, hyperpigmentation, and dullness.",
-    image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
+    image: "/ai-images/services/Chemical%20Peels.png",
   },
   {
     title: "Microneedling",
     description: "Collagen induction therapy to improve skin texture, minimize pores, and reduce the appearance of acne scarring and fine lines.",
-    image: "https://images.unsplash.com/photo-1556227834-09f1de7a7d14?w=600&q=80",
+    image: "/ai-images/services/Microneedling.png",
   },
   {
     title: "Sclerotherapy",
     description: "Minimally invasive treatment for spider veins and small varicose veins, using precise injections to fade unwanted visible vessels.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+    image: "/ai-images/services/Sclerotherapy.png",
   },
   {
     title: "Kybella",
     description: "FDA-approved deoxycholic acid injections to permanently destroy fat cells under the chin — eliminating submental fullness without surgery.",
-    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80",
+    image: "/ai-images/services/Kybella.png",
   },
   {
     title: "Daxxify",
     description: "Next-generation neuromodulator offering longer-lasting wrinkle relaxation than traditional Botox — fewer appointments, same natural results.",
-    image: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?w=600&q=80",
+    image: "/ai-images/services/Daxxify.png",
   },
   {
     title: "Sculptra",
@@ -133,22 +133,22 @@ const cosmeticServices = [
   {
     title: "Radiesse",
     description: "Calcium hydroxylapatite filler for immediate volume and long-term collagen stimulation — ideal for deep facial folds and hand rejuvenation.",
-    image: "https://images.unsplash.com/photo-1552862750-746b8f6f7f25?w=600&q=80",
+    image: "/ai-images/services/Radiesse.png",
   },
   {
     title: "PDO Thread Lift",
     description: "Non-surgical facial contouring using dissolvable PDO threads to lift and tighten sagging skin with minimal downtime.",
-    image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80",
+    image: "/ai-images/services/PDO%20Thread%20Lift.png",
   },
   {
     title: "Laser Hair Removal",
     description: "Permanent hair reduction across all skin types using advanced laser modalities — face, body, and sensitive areas treated with precision.",
-    image: "https://images.unsplash.com/photo-1583795128727-6ec3642408f8?w=600&q=80",
+    image: "/ai-images/services/Laser%20Hair%20Removal.png",
   },
   {
     title: "Smoothbeam Laser",
     description: "1450nm diode laser targeting the sebaceous gland to reduce active acne and improve post-acne scarring with minimal side effects.",
-    image: "https://images.unsplash.com/photo-1546015720-b8b30df5aa27?w=600&q=80",
+    image: "/ai-images/services/Smoothbeam%20Laser.png",
   },
 ];
 
