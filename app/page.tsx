@@ -63,17 +63,17 @@ export default function Home() {
           {
             title: "Skin Cancer Screening",
             desc: "Early detection and full-body mole evaluations.",
-            image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=600&q=80",
+            image: "/ai-images/services/skin%20cancer%20screening.png",
           },
           {
             title: "Eczema & Psoriasis",
             desc: "Evidence-based management for chronic conditions.",
-            image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&q=80",
+            image: "/ai-images/services/eczema.png",
           },
           {
             title: "Mole Removal",
             desc: "Safe, precise removal with pathology when indicated.",
-            image: "https://images.unsplash.com/photo-1584467735867-4297ae2ebcee?w=600&q=80",
+            image: "/ai-images/services/mole%20evaluation.png",
           },
         ]}
         cosmeticCards={[
@@ -90,12 +90,12 @@ export default function Home() {
           {
             title: "Laser Treatments",
             desc: "Resurfacing, pigmentation, and rejuvenation.",
-            image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&q=80",
+            image: "/ai-images/services/laser%20skin%20resurfacing.png",
           },
           {
             title: "Chemical Peels",
             desc: "Exfoliation and renewal for a luminous complexion.",
-            image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
+            image: "/ai-images/services/Chemical%20Peels.png",
           },
         ]}
       />
